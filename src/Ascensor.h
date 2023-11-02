@@ -15,6 +15,13 @@ private:
 	unsigned int cantidadDePisos;
 	unsigned int pisoActual;
 	unsigned int contadorDePisos;
+	unsigned int* llamadasDesdePiso;
+
+	/*
+	 * pre:  -
+	 * post: lanza una excepción si 'piso' no está entre 0 y cantidadDePisos
+	 */
+	void validarPiso(unsigned int piso);
 
 public:
 
@@ -40,8 +47,8 @@ public:
 
 	/*
 	 * pre:  -
-	 * post: 'piso' indica el piso al que se quiere llegar, 'piso' debe ser mayor o
-	 * 		 igual a 0 y menor o igual a CantidadDePisos
+	 * post: 'piso' indica el piso al que se quiere llegar, 'piso' està entre 0
+	 * y CantidadDePisos
 	 */
 	unsigned int llamarAlPiso(unsigned int piso);
 
@@ -51,6 +58,18 @@ public:
 	 * 		 momento
 	 */
 	unsigned int getPisosRecorridos();
+
+	/*
+	 * pre:  'piso' està entre 0 y CantidadDePisos
+	 * post: devuelve la cantidad de veces que el ascensor parò en ese piso
+	 */
+	unsigned int getLlamadasDesdePiso(unsigned int piso);
+
+    /*
+     * pre:  -
+     * post: libera los recursos asociados.
+     */
+	~Ascensor();
 };
 
 #endif /* ASCENSOR_H_ */

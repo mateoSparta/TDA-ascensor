@@ -54,6 +54,12 @@ int main() {
 			 << ascensor.getPisosRecorridos() << endl;
 		cout << "Piso actual:  "
 			 << ascensor.getPisoActual() << endl;
+		cout << "Cantidad de veces que el ascensor parò en cada piso: " << endl;
+
+		for(unsigned int i = 0; i <= ascensor.getCantidadDePisos(); i++){
+			cout << "Piso " << i << ": "
+				 << ascensor.getLlamadasDesdePiso(i) << endl;
+		}
 
 		do {
 			cout << "Desea salir del ascensor? (s/n): ";
