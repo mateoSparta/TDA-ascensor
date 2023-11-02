@@ -14,6 +14,7 @@ private:
 
 	unsigned int cantidadDePisos;
 	unsigned int pisoActual;
+	unsigned int contadorDePisos;
 
 public:
 
@@ -43,6 +44,13 @@ public:
 	 * 		 igual a 0 y menor o igual a CantidadDePisos
 	 */
 	unsigned int llamarAlPiso(unsigned int piso);
+
+	/*
+	 * pre:  -
+	 * post: devuelve la cantidad de pisos por los que pasò el ascensor hasta el
+	 * 		 momento
+	 */
+	unsigned int getPisosRecorridos();
 };
 
 #endif /* ASCENSOR_H_ */

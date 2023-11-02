@@ -50,6 +50,8 @@ int main() {
 
 		cout << endl << "Pisos desplazados: "
 			 << ascensor.llamarAlPiso(pisoIngresado) << endl;
+		cout << "Total de pisos recorridos: "
+			 << ascensor.getPisosRecorridos() << endl;
 		cout << "Piso actual:  "
 			 << ascensor.getPisoActual() << endl;
 

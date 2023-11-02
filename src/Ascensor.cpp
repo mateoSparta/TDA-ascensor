@@ -17,6 +17,7 @@ Ascensor::Ascensor(unsigned int pisos){
 	}
 	this->cantidadDePisos = pisos;
 	this->pisoActual = 0;
+	this->contadorDePisos = 0;
 }
 
 unsigned int Ascensor::getCantidadDePisos(){
@@ -42,7 +43,12 @@ unsigned int Ascensor::llamarAlPiso(unsigned int piso){
 	}
 
 	this->pisoActual = piso;
+	this->contadorDePisos += desplazamiento;
 
 	return desplazamiento;
 }
 
+unsigned int Ascensor::getPisosRecorridos(){
+
+	return this->contadorDePisos;
+}
