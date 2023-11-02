@@ -14,12 +14,15 @@ Ascensor::Ascensor(unsigned int pisos){
 		throw ("La cantidad de pisos debe ser mayor a 1");
 	}
 	this->cantidadDePisos = pisos;
+	this->pisoActual = 0;
 }
 
 unsigned int Ascensor::getCantidadDePisos(){
 	return this->cantidadDePisos;
 }
 
-
+unsigned int Ascensor::getPisoActual(){
+	return this->pisoActual;
+}
 
 

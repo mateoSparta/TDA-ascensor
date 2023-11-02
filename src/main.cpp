@@ -39,5 +39,8 @@ int main() {
     cout << "El ascensor se mueve entre PB y el piso "
     	 << ascensor.getCantidadDePisos() << endl;
 
+    cout << "Ahora se encuentra en el piso "
+    	 << ascensor.getPisoActual() << endl;
+
     return 0;
 }

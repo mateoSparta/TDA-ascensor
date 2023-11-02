@@ -13,6 +13,7 @@ class Ascensor {
 private:
 
 	unsigned int cantidadDePisos;
+	unsigned int pisoActual;
 
 public:
 
@@ -28,6 +29,13 @@ public:
 	 * post: devuelve la cantidad de pisos a los que puede acceder el ascensor
 	 */
 	unsigned int getCantidadDePisos();
+
+	/*
+	 * pre: -
+	 * post: devuelve el piso en el que se encuentra el ascensor, si està en PB
+	 * 		 devuelve 0
+	 */
+	unsigned int getPisoActual();
 };
 
 #endif /* ASCENSOR_H_ */
