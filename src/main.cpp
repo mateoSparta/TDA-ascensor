@@ -32,6 +32,9 @@ using namespace std;
 
 int main() {
 
+	unsigned int pisoIngresado;
+	char deseaSalir = 'n';
+
     cout << ".:: Ascensor ::." << endl;
 
     Ascensor ascensor(10);
@@ -41,6 +44,21 @@ int main() {
 
     cout << "Ahora se encuentra en el piso "
     	 << ascensor.getPisoActual() << endl;
+    do {
+		cout << "Ingrese el piso al que desea ir: ";
+		cin  >> pisoIngresado;
+
+		cout << endl << "Pisos desplazados: "
+			 << ascensor.llamarAlPiso(pisoIngresado) << endl;
+		cout << "Piso actual:  "
+			 << ascensor.getPisoActual() << endl;
+
+		do {
+			cout << "Desea salir del ascensor? (s/n): ";
+			cin >> deseaSalir;
+		} while(deseaSalir != 's' && deseaSalir != 'n');
+
+    } while(deseaSalir == 'n');
 
     return 0;
 }

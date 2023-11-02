@@ -8,6 +8,8 @@
 #include "Ascensor.h"
 #include <string>
 
+using namespace std;
+
 Ascensor::Ascensor(unsigned int pisos){
 
 	if(pisos < 1){
@@ -25,4 +27,22 @@ unsigned int Ascensor::getPisoActual(){
 	return this->pisoActual;
 }
 
+unsigned int Ascensor::llamarAlPiso(unsigned int piso){
+
+	unsigned int desplazamiento;
+
+	if(piso > this->cantidadDePisos){
+		throw string("El piso ingresado no existe");
+	}
+
+	if(piso < this->pisoActual){
+		desplazamiento = this->pisoActual - piso;
+	} else {
+		desplazamiento = piso - this->pisoActual;
+	}
+
+	this->pisoActual = piso;
+
+	return desplazamiento;
+}
 

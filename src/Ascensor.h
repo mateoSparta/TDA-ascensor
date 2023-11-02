@@ -36,6 +36,13 @@ public:
 	 * 		 devuelve 0
 	 */
 	unsigned int getPisoActual();
+
+	/*
+	 * pre:  -
+	 * post: 'piso' indica el piso al que se quiere llegar, 'piso' debe ser mayor o
+	 * 		 igual a 0 y menor o igual a CantidadDePisos
+	 */
+	unsigned int llamarAlPiso(unsigned int piso);
 };
 
 #endif /* ASCENSOR_H_ */
